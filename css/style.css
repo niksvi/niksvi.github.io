@@ -206,11 +206,11 @@ html {
   width: 100%;
 }
 
-@keyframes show{
-  0%{
+@keyframes show {
+  0% {
   opacity:0;
   }
   100% {
   opacity:1;
   }
-  }
+}
