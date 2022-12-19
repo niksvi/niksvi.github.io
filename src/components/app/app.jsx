@@ -9,6 +9,7 @@ import Loader from '../loader/loader';
 export default function App() {
   const [latitude, longitude] = useLocation();
   const [weatherData, setWeatherData] = useState(null);
+  const loc = `${latitude}` + " " + `${longitude}`
 
   useEffect(() => {
     (async () => {
@@ -26,7 +27,8 @@ export default function App() {
 
   return (
     <>
-      <PageTitle title="Погода" />
+      <PageTitle title="Виджет погоды" />
+      { weatherData && <PageTitle title={loc} />}
       { !weatherData ? <Loader /> : <WeatherCard data={weatherData} />}
     </>
   )
